@@ -1,0 +1,90 @@
+Componente,Composizione,Specifiche,Ricic,More,Extra,Acidificazione,Cambiamento climatico tot,Uso del suolo,Particolato,"Formazione di ozono fotochimico, salute umana",Uso di risorse fossili,Uso acqua
+Vassoio preformato,PET,Inserisci il contenuto di r-PET,,,,3.60E-03,2.65075,7.990833333,2.44E-08,6.31E-03,72.9275,0.125654167
+Vassoio preformato,PET/PE,Inserisci il contenuto di r-PET,,,,0.002958333,2.057,9.740833333,2.26E-08,0.00270275,75.01083333,0.068570833
+Vassoio preformato,XPS,Inserisci il contenuto di r-XPS,,,,0.004822917,2.77575,8.47,3.38E-08,0.00939025,84.90666667,0.565966667
+Vassoio preformato,Carta + PE Aticelca A,Composizione in peso: 92% cellulosa + 8% LDPE,,,,0.00535,1.15,438.0088202,5.52E-08,0.000826394,14.60810011,0.549972365
+Vassoio preformato,Carta + PE Aticelca B,Composizione in peso: 86% cellulosa + 14% LDPE,,,,0.00526,1.24,411,5.36E-08,0.000989,19.1,0.526
+Vassoio preformato,Carta + PET Aticelca A,Composizione in peso: 92% cellulosa + 8% PET,,,,0.0054,1.2,438,5.53E-08,0.00111,14.4,0.554
+Vassoio preformato,Carta + PET Aticelca B,Composizione in peso: 86% cellulosa + 14% PET,,,,0.00535,1.33,410,5.39E-08,0.00149,18.8,0.533
+Vassoio preformato,Carta + PLA Aticelca A,Composizione in peso: 92% cellulosa + 10% PLA,,,,0.00664,1.2,456,7.55E-08,0.00116,11.1,0.612
+Vassoio preformato,Carta + PLA Aticelca B,Composizione in peso: 86% cellulosa + 14% PLA,,,,0.00752,1.33,442,8.92E-08,0.00158,13,0.634
+Vassoio preformato,Alluminio,100% Alu vergine,,,,0.0532,10.2,18.1,7.17E-07,0.025,132,3.51
+Vassoio preformato,PP,100% PP vergine,,,,0.003610595,2.470833333,12.73204082,2.62E-08,0.003721741,80.60840136,0.307158163
+Vassoio preformato,PLA,100% PLA vergine,,,,0.020287891,3.161734694,246.4905442,2.91E-07,0.007537643,37.45363946,1.027821429
+Pad assorbente,Carta + PE,Composizione in peso: 90% cellulosa + 10% LDPE,,,,0.00205,0.433,319.2597412,5.57E-08,0.000340977,8.433598141,0.753316027
+Top,PET1,100% vergine,,,,0.0031,2.37,5.54,2.04E-08,0.00583,66.9,0.0853
+Top,PP1,100% vergine,,,,0.00251,1.75,4.08,1.71E-08,0.00286,67.1,0.105
+Top,PA1,100% vergine,,,,0.00979,7.44,6.42,5.75E-08,0.0136,143,0.0838
+Top,PVC1,100% vergine,,,,0.00294,2.08,9.62,2.52E-08,0.00526,51.1,0.0823
+Top,PE1,Composizione in peso: 100% vergine; 25µm; PE 36%; PP 24%; PA 32%; EVOH 8% ,,,,0.00248,1.8,7.22,1.87E-08,0.00237,68.9,0.0305
+Top,EVA/EVOH1,Composizione in peso: 100% vergine; 39µm; PE 43% + adv 5% + PET/PA coex (39%/13%) ,,,,0.0079584,2.1634,5.9233,6.40E-08,0.0067951,71.594,1.5352
+Bottom,PET2,100% vergine,,,,0.0031,2.37,5.54,2.04E-08,0.00583,66.9,0.0853
+Bottom,PP2,100% vergine,,,,0.00251,1.75,4.08,1.71E-08,0.00286,67.1,0.105
+Bottom,PA2,100% vergine,,,,0.00979,7.44,6.42,5.75E-08,0.0136,143,0.0838
+Bottom,PVC2,100% vergine,,,,0.00294,2.08,9.62,2.52E-08,0.00526,51.1,0.0823
+Bottom,PE2,Composizione in peso: 100% vergine; 25µm; PE 36%; PP 24%; PA 32%; EVOH 8% ,,,,0.00248,1.8,7.22,1.87E-08,0.00237,68.9,0.0305
+Bottom,EVA/EVOH2,Composizione in peso: 100% vergine; 39µm; PE 43% + adv 5% + PET/PA coex (39%/13%) ,,,,0.0079584,2.1634,5.9233,6.40E-08,0.0067951,71.594,1.5352
+Supporto in cellulosa,cartene,100% carta greaseproof bianca,,,,0.0048268,0.58777,497.59,5.27E-08,0.0045492,9.3886,0.52741
+Busta,Carta+PP,Composizione in peso: 63% kraft bianco + 37% plastica PP ,,,,0.00453,1.25,317,4.40E-08,0.00132,28.8,0.434
+Busta,PE,100% LDPE vergine,,,,0.002958333,2.057,9.740833333,2.26E-08,0.00270275,75.01083333,0.068570833
+Cassa in cartone + foglio sfuso,Cassa in cartone,Composizione in peso: 85%-100% riciclato,,,,0.00442,0.901,497,7.26E-08,0.00555,12.5,0.205
+Cassa in cartone + foglio sfuso,Foglio plastico sfuso,carta greaseproof,,,,0.0048268,0.58777,497.59,5.27E-08,0.0045492,9.3886,0.52741
+Secondario,I01529 cassa cartone,30*40*12/15 cm,Contenuto riciclato: 80-100%,270 ± 8% gr indice di smaltimento PAP20,0.27,0.00463,0.907,514.8995709,7.23E-08,0.006351368,12.1725665,0.293822809
+Secondario,I00615  cassa cartone ,60*40*9 cm,Contenuto riciclato: 0%,370 ± 8% gr indice di smaltimento PAP20,0.37,0.00463,0.907,514.8995709,7.23E-08,0.006351368,12.1725665,0.293822809
+Secondario,I01390 cassa cartone ,60*40*12 cm,Contenuto riciclato: 0%,450 ± 8% gr indice di smaltimento PAP20,0.45,4.63E-03,0.907,514.8995709,7.23E-08,6.35E-03,12.1725665,0.293822809
+Secondario,I00618  cassa cartone ,60*40*15 cm,Contenuto riciclato: 0%,540 ± 8% gr indice di smaltimento PAP20,0.54,0.00463,0.907,514.8995709,7.23E-08,0.006351368,12.1725665,0.293822809
+Secondario2,I00625 coperchio anonimo ,535x564 mm,Contenuto riciclato: 0%,107 gr indice di smaltimento PAP20  ,0.107,0.00463,0.907,514.8995709,7.23E-08,0.006351368,12.1725665,0.293822809
+Secondario2,I00069 coperchio crt manuale tacc ,580x607 mm,Contenuto riciclato: 0%,136 gr indice di smaltimento PAP20,0.136,0.00463,0.907,514.8995709,7.23E-08,0.006351368,12.1725665,0.293822809
+Secondario2,Nessun Coperchio,,Nessun Coperchio,,0,0,0,0,0,0,0,0
+r-PET-pre,,,,,,6.60E-04,0.499708333,4.50125,5.26E-09,4.61E-04,5.1775,0.1039875
+r-PET-post,,,,,,0.001151042,0.766375,5.292916667,8.25E-09,0.000847542,7.042083333,0.094091667
+PET-virgin,,,,,,0.003604167,2.65075,7.990833333,2.44E-08,0.006306917,72.9275,0.125654167
+r-XPS,,,,,,0.00295587,2.054162869,9.732496899,2.25E-08,0.00269783,74.84953301,0.068508122
+r-XPS-pre,,,,,,6.90E-04,0.5195,3.928333333,5.44E-09,4.33E-04,4.625416667,0.081695833
+r-XPS-post,,,,,,0.001303125,0.992416667,6.292916667,9.46E-09,0.000919417,7.531666667,0.124820833
+Confezionamento,packaging stretch,,,,,,,,,,,
+Confezionamento,packaging termosaldato,,,,,,,,,,,
+Confezionamento,packaging skin,,,,,,,,,,,
+Confezionamento,packaging sottovuoto,,,,,,,,,,,
+lamination vassoio,,,,,,0.000664,0.472,6.77,5.67E-09,0.000483,6.49,0.181
+lamination topbot,,,,,,0.000375394,0.182268252,2.219386095,3.12E-09,0.000234109,3.237541878,0.036832044
+,,,,,,,,,,,,
+EoL,EoL PET/PE,,,,,0.000237959,1.618239112,-0.089558743,-9.01E-11,0.00015726,-1.5904,0.1388
+EoL,EoL PET,,,,,0.000275102,1.565941752,0.084537747,3.81E-10,0.000203528,-0.963109771,0.131953581
+EoL,EoL PE,PE,,,,8.98E-05,1.81119556,-0.785793715,-1.97E-09,-0.0000297,-4.1,0.166
+EoL,EoL PP,PP,,,,8.92E-05,1.810398977,-0.787605544,-1.98E-09,-0.0000303,-4.11,0.166
+EoL,EoL XPS,,,,,0.000287661,1.94230011,-0.603627118,-1.02E-09,0.000223244,-3.447953385,0.159641935
+EoL,EoL PLA,PLA,,,,0.000372067,1.43862538,-0.248577827,1.90E-10,0.000315,-2.33,0.147
+EoL,EoL PA,,,,,0.002561599,1.137045644,0.124053375,1.16E-09,0.00355,-4.9,0.153
+EoL,EoL PVC,,,,,0.000677139,1.889074148,2.304535169,1.32E-08,0.000623,2.63,0.137
+EoL,EoL EVOH,,,,,0.000372067,1.43862538,-0.248577827,1.90E-10,0.000315,-2.33,0.147
+EoL,EoL CARTAPE,Carta + PE Aticelca A,,,,-0.000688082,1.187570441,-163.4733707,-2.62E-08,8.02E-05,-5.935794151,-0.268265324
+EoL,EoL CARTAPE,Carta + PE Aticelca B,,,,-0.000688082,1.187570441,-163.4733707,-2.62E-08,8.02E-05,-5.935794151,-0.268265324
+EoL,EoL CARTAPET,Carta + PET Aticelca A,,,,-0.000688082,1.187570441,-163.4733707,-2.62E-08,8.02E-05,-5.935794151,-0.268265324
+EoL,EoL CARTAPET,Carta + PET Aticelca B,,,,-0.000688082,1.187570441,-163.4733707,-2.62E-08,8.02E-05,-5.935794151,-0.268265324
+EoL,EoL CARTAPLA,Carta + PLA Aticelca A,,,,-0.000688082,1.187570441,-163.4733707,-2.62E-08,8.02E-05,-5.935794151,-0.268265324
+EoL,EoL CARTAPLA,Carta + PLA Aticelca B,,,,-0.000688082,1.187570441,-163.4733707,-2.62E-08,8.02E-05,-5.935794151,-0.268265324
+EoL,EoL AL,Alluminio,,,,-0.001127,-0.18072998,0.718070044,-1.23E-08,-0.000303192,-2.193828757,-0.018476959
+EoL,EoL CARTENE,cartene,,,,0.000677139,1.889074148,2.304535169,1.32E-08,0.000623484,2.628432764,0.136572263
+EoL,EoL CARTAPP,Carta+PP,,,,0.000313106,0.54917531,-0.74232732,2.27E-09,0.000500733,-0.36125128,0.028195039
+EoL,,Carta + PE,,,,7.50E-05,0.52718103,-3.607782699,-3.66E-10,5.26E-05,-3.796354149,-0.021524015
+,,,,,,,,,,,,
+Trasporto,,,,,,4.05E-07,6.80E-05,0.000722163,1.50E-12,3.81E-07,0.000893486,7.62E-07
+,,,,,,,,,,,,
+,pallet in legno,,,,,0.00093472,0.280048,408.48,1.87E-07,0.00115184,3.51072,0.0149408
+,angolari in cartone,,,,,0.01105,2.2525,1242.5,1.82E-07,0.013875,31.25,0.5125
+,film estensibile LDPE,,,,,0.0071,4.9368,23.378,5.42E-08,0.0064866,180.026,0.16457
+,,,,,,,,,,,,
+packaging stretch,,,,,,0.0000197,0.0205,0.0622,1.77E-10,0.0000187,0.278,0.00287
+packaging termosaldato,,,,,,0.0000235,0.0243,0.0759,2.11E-10,0.0000223,0.333,0.00341
+packaging skin,,,,,,0.00015,0.15,0.426,1.31E-09,0.000143,1.98,0.0216
+packaging sottovuoto,,,,,,0.00015,0.15,0.426,1.31E-09,0.000143,1.98,0.0216
+part2,,,,,,-8.90E-07,0.002218856,-0.695408223,-9.25E-11,2.24E-06,0.003159738,-0.001186339
+,,,,,,,,,,,,
+,EoL second,,,,,-0.000384,0.387,-199,-2.95E-08,0.000636,4.66,-0.366
+,,,,,,,,,,,,
+,EoL pallet in legno,,,,,0.00017388,0.54832,-23.644,1.08E-09,0.00039652,0.31648,0.0024932
+,EoL angolari in cartone,,,,,-0.00096,0.9675,-497.5,-7.38E-08,0.00159,11.65,-0.915
+,EoL film estensibile LDPE,,,,,-0.0018408,1.2624,-16.152,-1.56E-08,-0.0022752,-41.04,-0.2424
+,,,,,,,,,,,,
+Distribution,,,,,,0.000000407,0.0000685,0.000754,1.52E-12,0.000000383,0.000933,0.000000795
