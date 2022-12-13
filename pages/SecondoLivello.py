@@ -701,7 +701,7 @@ def data_store(inputdokmeh2, dokmeexcel, volte, data, column,dataexcel, columnex
 
         "0": ["Secondario", "Secondario", "Secondario", "Secondario", "######", "Terziario", "######", "Confezionamento", "######", "Distribuzione"],
         "1": [input1, input2,"Cartene", "Numero di imballaggi primari per scatola : {}".format(num1),  "######", "Numero di imballaggi secondari per pallet : {}".format(num2), "######", "Tipo: {}".format(ddconf), "######", "######"],
-        "2": ["Dimensioni: {}".format(df.loc[(df['Composizione'] == input1)]['Specifiche'].values[0]), "Dimensioni: {}".format(df.loc[(df['Composizione'] == input1)]['Specifiche'].values[0]),"area: {} m2".format(input3), "######", "######", "######",  "######", "Peso netto / unità: {} g".format(inputweight), "######", "######"],
+        "2": ["Dimensioni: {}".format(df.loc[(df['Composizione'] == input1)]['Specifiche'].values[0]), "Dimensioni: {}".format(df.loc[(df['Composizione'] == input2)]['Specifiche'].values[0]),"area: {} m2".format(input3), "######", "######", "######",  "######", "Peso netto / unità: {} g".format(inputweight), "######", "######"],
         "3": ["Peso/unità: {}".format(df.loc[(df['Composizione'] == input1)]['More'].values[0]), "Peso/unità: {}".format(df.loc[(df['Composizione'] == input2)]['More'].values[0]), "Peso/unità: {} g/m2".format(input4), "######", "######", "######",  "######","La percentuale di sfrido : {} %".format(sfrido), "######", "######"],
         "4": ["Distanza: {} km".format(dis1),"Distanza: {} km".format(dis2),"Distanza: {} km".format(dis3), "######", "######", "Distanza: {} km".format(dis4),"######", "######", "######", "Distanza: {} km".format(finaldis)],
 
