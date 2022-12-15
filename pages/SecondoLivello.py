@@ -1236,7 +1236,7 @@ def data_store(inputdokmeh2, dokmeexcel, volte, data, column,dataexcel, columnex
                         "Fine vita imb. primario", "Fine vita imb. secondario", "Fine vita imb. terziario"
 
                         ],
-        "Contributo delle fasi del ciclo di vita %": [prod1[0], prod2[0], prod3[0], conf[0], dist[0], fine1[0], fine2[0], fine3[0],
+        "Contributo delle fasi del ciclo di vita (A) %": [prod1[0], prod2[0], prod3[0], conf[0], dist[0], fine1[0], fine2[0], fine3[0],
                                                       prod1[1], prod2[1], prod3[1], conf[1], dist[1], fine1[1], fine2[1], fine3[1],
                                                       prod1[2], prod2[2], prod3[2], conf[2], dist[2], fine1[2], fine2[2], fine3[2],
                                                       prod1[3], prod2[3], prod3[3], conf[3], dist[3], fine1[3], fine2[3], fine3[3],
@@ -1245,7 +1245,7 @@ def data_store(inputdokmeh2, dokmeexcel, volte, data, column,dataexcel, columnex
                                                       prod1[6], prod2[6], prod3[6], conf[6], dist[6], fine1[6], fine2[6], fine3[6]
 
                                                       ],
-        "Contributo delle fasi del ciclo di vita(b) %": [prod1b[0], prod2b[0], prod3b[0], confb[0], distb[0], fine1b[0],
+        "Contributo delle fasi del ciclo di vita (B) %": [prod1b[0], prod2b[0], prod3b[0], confb[0], distb[0], fine1b[0],
                                                       fine2b[0], fine3b[0],
                                                       prod1b[1], prod2b[1], prod3b[1], confb[1], distb[1], fine1b[1],
                                                       fine2b[1], fine3b[1],
@@ -1263,8 +1263,8 @@ def data_store(inputdokmeh2, dokmeexcel, volte, data, column,dataexcel, columnex
                                                       ],
 
     })
-    fig = px.bar(jiwooli, x="Categorie impatto", y="Contributo delle fasi del ciclo di vita %", color="Faso", title="Solution 1", labels={'Categorie impatto': " "}, hover_name="Faso", hover_data={"Faso":False,"Contributo delle fasi del ciclo di vita %":True, "Categorie impatto":True})
-    fig2 = px.bar(jiwooli, x="Categorie impatto", y="Contributo delle fasi del ciclo di vita(b) %", color="Faso", title="Solution 2", labels={'Categorie impatto': " "}, hover_name="Faso", hover_data={"Faso":False,"Contributo delle fasi del ciclo di vita %":True, "Categorie impatto":True})
+    fig = px.bar(jiwooli, x="Categorie impatto", y="Contributo delle fasi del ciclo di vita (A) %", color="Faso", title="Solution 1", labels={'Categorie impatto': " "}, hover_name="Faso", hover_data={"Faso":False,"Contributo delle fasi del ciclo di vita (A) %":True, "Categorie impatto":True})
+    fig2 = px.bar(jiwooli, x="Categorie impatto", y="Contributo delle fasi del ciclo di vita (B) %", color="Faso", title="Solution 2", labels={'Categorie impatto': " "}, hover_name="Faso", hover_data={"Faso":False,"Contributo delle fasi del ciclo di vita (B) %":True, "Categorie impatto":True})
 
     fig9 = px.pie(pie1, values='Footprint9', names='Componente',  hole=.3, labels={'Footprint9':'Contribution',"Componente":"Componente"})
     fig3 = px.pie(pie1, values='Footprint1', names='Componente',  hole=.3, labels={'Footprint1':'Contribution',"Componente":"Componente"})
