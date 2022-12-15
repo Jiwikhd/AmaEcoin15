@@ -32,19 +32,21 @@ app.layout = html.Div([
                     dbc.Row(
                         [
                             dbc.Col(html.Img(src=Ecoinnovazione_logo, height="100px", style={"margin-left": "0px"})),
-                            dbc.Col(html.Img(src=Amadori_logo, height="100px", style={"margin-left": "850px"})),
+                            dbc.Col(html.Img(src=Amadori_logo, height="100px", style={"float": "right"})),
                         ],
                         align="center",
                         className="g-0",
 
                     ),
-                    style={"textDecoration": "none", 'color': 'dark'},
+                    style={"textDecoration": "none", 'color': 'dark', "width":"100%"},
                 )
 
             ]
         ),
         color="#DAF0AD",
         dark=False,
+	style={'backgroundColor': '#DAF0AD', "width":"100%"},
+
     ),
 
              dbc.DropdownMenu(
