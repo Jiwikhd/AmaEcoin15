@@ -105,7 +105,7 @@ layout = html.Div([
                       style={"width": "54%","color":"white"}, color="#004e18"),
     html.Br(),
 
-    dbc.Row([dbc.Col([dbc.Row(html.P("Tipo di confezionamento : ")), dbc.Row(html.P("La percentuale di sfrido : "))], width=3),dbc.Col([dbc.Row(dcc.Dropdown(df.loc[(df['Componente'] == 'Confezionamento')]['Composizione'], 'packaging stretch',id="ddconf",persistence=True,persistence_type='memory')), dbc.Row(dbc.Input(type="number", value=0, size="sm",min=0,max=100, id = "sfrido",persistence=True,persistence_type='memory', style={"width":"91%", "margin-left":"12px"}))], width=4),dbc.Col("", width=8)],style= {"font-size":"12px"}),
+    dbc.Row([dbc.Col([dbc.Row(html.P("Tipo di confezionamento : ")), dbc.Row(html.P("% di sfrido prodotta sul packaging primario nel processo di confezionamento : "))], width=7),dbc.Col([dbc.Row(dcc.Dropdown(df.loc[(df['Componente'] == 'Confezionamento')]['Composizione'], 'packaging stretch',id="ddconf",persistence=True,persistence_type='memory')), dbc.Row(dbc.Input(type="number", value=0, size="sm",min=0,max=100, id = "sfrido",persistence=True,persistence_type='memory', style={"width":"91%", "margin-left":"12px"}))], width=4),dbc.Col("", width=8)],style= {"font-size":"12px"}),
     html.Br(),
     dbc.Card([dbc.CardBody(html.Img(src=pil_image_sfrido, height="53px", width="373px"))],
              style={"margin-left": "10px","width": "30%", "height": "30%", "background-color": "#DAF0AD"}),
@@ -954,6 +954,15 @@ def data_store(inputdokmeh2, dokmeexcel, volte, data, column,dataexcel, columnex
 
 
 
+
+    })
+
+    schifossoExcel2 = pd.DataFrame({
+
+        "Indicatore": schifosso["Indicator"],
+        "UdM": ["Mole of H+ eq.", "kg CO2 eq.", "Pt", "kg NMVOC eq.", "MJ", "Disease incidences", "m³ eq."],
+
+
         "Imballaggio Primario produzione & trasporto (Soluzione A)": schifosso["Primario"],
         "Imballaggio Primario produzione & trasporto (Soluzione B)": schifosso["Primariob"],
 
@@ -974,21 +983,22 @@ def data_store(inputdokmeh2, dokmeexcel, volte, data, column,dataexcel, columnex
         "Total (Soluzione A)": schifosso["Total"],
         "Total (Soluzione B)": schifosso["Totalb"],
 
-
     })
 
     if dokmeexcel > volte:
         name = datetime.now().strftime('%d%H%M')
         writer = pd.ExcelWriter('Amadori_'+name+'.xlsx', engine='xlsxwriter')
         workbook = writer.book
-        worksheet = workbook.add_worksheet('General')
+        worksheet = workbook.add_worksheet('Data')
         worksheet.write('A1',
                          'This result is created on  ' + datetime.now().strftime('%d %b %Y %H:%M') + ' through CF tool.',
                          workbook.add_format({'bold': True, 'color': '#E26B0A', 'size': 14}))
 
-        Inputexcel.to_excel(writer, sheet_name='Input Primario')
-        Inputexcel2.to_excel(writer, sheet_name='Input Secondario&Terziario')
-        schifossoExcel.to_excel(writer, sheet_name='Results')
+        Inputexcel.to_excel(writer, sheet_name='Input data-primo livello')
+        Inputexcel2.to_excel(writer, sheet_name='Input data-secondo livello')
+        schifossoExcel2.to_excel(writer, sheet_name='Results-ciclo di vita totale')
+        schifossoExcel.to_excel(writer, sheet_name='Results-dettaglio imb. primario')
+
 
         writer.save()
         dl = dcc.send_file('Amadori_'+name+'.xlsx')
@@ -1029,9 +1039,9 @@ def data_store(inputdokmeh2, dokmeexcel, volte, data, column,dataexcel, columnex
     elif difference2 < -10:
         rang2 = {"color": "white", "background-color": "green"}
 
-    difference3 = ((schifosso.iloc[3, 52] - schifosso.iloc[3, 51]) / (schifosso.iloc[3, 51])) * 100
+    difference3 = ((schifosso.iloc[4, 52] - schifosso.iloc[4, 51]) / (schifosso.iloc[4, 51])) * 100
     difmsg3 = "{} %".format("{:.0f}".format(difference3))
-    GWPtotA3 = "{}".format("{:.2e}".format(schifosso.iloc[3, 51]))
+    GWPtotA3 = "{}".format("{:.2e}".format(schifosso.iloc[4, 51]))
     if -10 <= difference3 <= 10:
         rang3 = {"color": "black", "background-color": "yellow"}
     elif difference3 > 10:
@@ -1039,9 +1049,9 @@ def data_store(inputdokmeh2, dokmeexcel, volte, data, column,dataexcel, columnex
     elif difference3 < -10:
         rang3 = {"color": "white", "background-color": "green"}
 
-    difference4 = ((schifosso.iloc[4, 52] - schifosso.iloc[4, 51]) / (schifosso.iloc[4, 51])) * 100
+    difference4 = ((schifosso.iloc[5, 52] - schifosso.iloc[5, 51]) / (schifosso.iloc[5, 51])) * 100
     difmsg4 = "{} %".format("{:.0f}".format(difference4))
-    GWPtotA4 = "{}".format("{:.2e}".format(schifosso.iloc[4, 51]))
+    GWPtotA4 = "{}".format("{:.2e}".format(schifosso.iloc[5, 51]))
     if -10 <= difference4 <= 10:
         rang4 = {"color": "black", "background-color": "yellow"}
     elif difference4 > 10:
@@ -1049,7 +1059,7 @@ def data_store(inputdokmeh2, dokmeexcel, volte, data, column,dataexcel, columnex
     elif difference4 < -10:
         rang4 = {"color": "white", "background-color": "green"}
 
-    difference5 = ((schifosso.iloc[5, 52] - schifosso.iloc[5, 51]) / (schifosso.iloc[5, 51])) * 100
+    difference5 = ((schifosso.iloc[3, 52] - schifosso.iloc[3, 51]) / (schifosso.iloc[3, 51])) * 100
     difmsg5 = "{} %".format("{:.0f}".format(difference5))
     GWPtotA5 = "{}".format("{:.2e}".format(schifosso.iloc[5, 51]))
     if -10 <= difference5 <= 10:
@@ -1340,6 +1350,7 @@ def data_store(inputdokmeh2, dokmeexcel, volte, data, column,dataexcel, columnex
             x=1,
             title_text=None
         ), legend_font=dict(size=13),
+        modebar_remove=["zoom", "pan", "select", "zoomIn", "zoomOut", "autoScale",  'lasso2d']
 
 
     )
@@ -1372,6 +1383,7 @@ def data_store(inputdokmeh2, dokmeexcel, volte, data, column,dataexcel, columnex
             x=1,
             title_text=None
         ), legend_font=dict(size=13),
+        modebar_remove=["zoom", "pan", "select", "zoomIn", "zoomOut", "autoScale", 'lasso2d']
 
 
     )
@@ -1401,7 +1413,6 @@ def second(input1, input2):
     dim2= df.loc[(df['Composizione'] == input2)]['Specifiche']
     peso2 = df.loc[(df['Composizione'] == input2)]['More']
     return dim, peso, dim2, peso2
-
 
 
 
