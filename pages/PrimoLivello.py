@@ -33,12 +33,15 @@ dash.register_page(__name__, path='/')
 
 layout = html.Div([
     html.Br(),
+    dbc.Button(dbc.Row([dbc.Col(html.Img(src=pil_image_pdf, height="32px", width="32px"), width=2),
+                        dbc.Col(html.P("Istruzioni d'uso", style={"margin-left": "5px"}))]), id="btnpdf", n_clicks=0,
+               style={"float": "left", "margin-left": "5px", "height": "45px", "background-color": "#004e18"}),
     html.Br(),
-
+    html.Br(),
     dbc.ListGroupItem(dbc.Row([
             dbc.Col(html.P("A) IMBALLAGGIO PRIMARIO"), width=8),
 
-            dbc.Col(dbc.Row([dbc.Col(html.P("Peso netto [g] / unità:"), width=6),dbc.Col(dbc.Input(type="number", id='pwb', value=0,min=0, size="sm",persistence=True,persistence_type='memory'), width=3)],className="g-0"))]),
+            dbc.Col(dbc.Row([dbc.Col(html.P("Peso netto [g / unità]:"), width=6),dbc.Col(dbc.Input(type="number", id='pwb', value=0,min=0, size="sm",persistence=True,persistence_type='memory'), width=3)],className="g-0"))]),
                       style={ "color":"white","height":"50px","margin-bottom":"20px"}, color="#004e18", active=False),
 
 
@@ -447,16 +450,14 @@ html.Td(dbc.Table([html.Tr(dbc.Row([dbc.Col([dbc.Row(html.P('% PET')),
             ]),
         ],style={"width":"70%", "margin-left":"15%","margin-right":"15%","font-size":"16px"}, bordered=True),
 
-    dbc.Button(dbc.Row([dbc.Col(html.Img(src=pil_image_pdf, height="32px", width="32px"), width=2),
-                        dbc.Col(html.P("Manual", style={"margin-left": "10px"}))]), id="btnpdf", n_clicks=0,
-               style={"float": "right", "margin-right": "30px", "height": "45px", "background-color":"#004e18"}),
+
     dcc.Download(id="downloadpdf"),
     html.Br(),
 
     html.Br(),
     html.Br(),
 
-    html.Div(id='dashtable', style={'width': '75%', "float": "right","display":"None", "overflow": "scroll", "maxHeight": "170px",
+    html.Div(id='dashtable', style={'width': '75%', "float": "right","display":"none", "overflow": "scroll", "maxHeight": "170px",
                                     "margin-right": "20px"}),
     html.Br(),
     html.P("© Ecoinnovazione srl 2022. Tutti i diritti riservati", style={"margin-left": "10px", "font-size": "11px"}),
@@ -682,7 +683,7 @@ def inputpeso(pwb, input1, input2, input3, input4, input5, input6, input7, input
 )
 def dlpdf(btnpdf):
     if btnpdf != 0:
-        return dcc.send_file("assets/Amadori_Manual.pdf")
+        return dcc.send_file("assets/Amadori_Manual_Final.pdf")
 
 
 @callback(
@@ -1666,9 +1667,9 @@ input_21b, input_22b, input_222b, input_31b,  input_333b, area3b, input_41b,  in
         GWPtotA0 = "{}".format("{:.2e}".format(vastable.iloc[0, 37]))
         GWPtotA = "{}".format("{:.2e}".format(vastable.iloc[1, 37]))
         GWPtotA2 = "{}".format("{:.2e}".format(vastable.iloc[2, 37]))
-        GWPtotA3 = "{}".format("{:.2e}".format(vastable.iloc[3, 37]))
-        GWPtotA4 = "{}".format("{:.2e}".format(vastable.iloc[4, 37]))
-        GWPtotA5 = "{}".format("{:.2e}".format(vastable.iloc[5, 37]))
+        GWPtotA3 = "{}".format("{:.2e}".format(vastable.iloc[4, 37]))
+        GWPtotA4 = "{}".format("{:.2e}".format(vastable.iloc[5, 37]))
+        GWPtotA5 = "{}".format("{:.2e}".format(vastable.iloc[3, 37]))
         GWPtotA6 = "{}".format("{:.2e}".format(vastable.iloc[6, 37]))
     elif ((tavolo1 == True) & (tavolo2 == True)) or ((input_1 == False) & (input_21 == False) &(input_31 == False) &(input_41 == False) &(input_51 == False) &(input_61 == False) & (input_1b == False) & (input_21b == False) &(input_31b == False) &(input_41b == False) &(input_51b == False) &(input_61b == False)):
         difference0 = 0
@@ -1689,16 +1690,16 @@ input_21b, input_22b, input_222b, input_31b,  input_333b, area3b, input_41b,  in
         difference0 = ((vastable.iloc[0, 38] - vastable.iloc[0, 37]) / (vastable.iloc[0, 37])) * 100
         difference = ((vastable.iloc[1, 38] - vastable.iloc[1, 37]) / (vastable.iloc[1, 37])) * 100
         difference2 = ((vastable.iloc[2, 38] - vastable.iloc[2, 37]) / (vastable.iloc[2, 37])) * 100
-        difference3 = ((vastable.iloc[3, 38] - vastable.iloc[3, 37]) / (vastable.iloc[3, 37])) * 100
-        difference4 = ((vastable.iloc[4, 38] - vastable.iloc[4, 37]) / (vastable.iloc[4, 37])) * 100
-        difference5 = ((vastable.iloc[5, 38] - vastable.iloc[5, 37]) / (vastable.iloc[5, 37])) * 100
+        difference3 = ((vastable.iloc[4, 38] - vastable.iloc[4, 37]) / (vastable.iloc[4, 37])) * 100
+        difference4 = ((vastable.iloc[5, 38] - vastable.iloc[5, 37]) / (vastable.iloc[5, 37])) * 100
+        difference5 = ((vastable.iloc[3, 38] - vastable.iloc[3, 37]) / (vastable.iloc[3, 37])) * 100
         difference6 = ((vastable.iloc[6, 38] - vastable.iloc[6, 37]) / (vastable.iloc[6, 37])) * 100
         GWPtotA0 = "{}".format("{:.2e}".format(vastable.iloc[0, 37]))
         GWPtotA = "{}".format("{:.2e}".format(vastable.iloc[1, 37]))
         GWPtotA2 = "{}".format("{:.2e}".format(vastable.iloc[2, 37]))
-        GWPtotA3 = "{}".format("{:.2e}".format(vastable.iloc[3, 37]))
-        GWPtotA4 = "{}".format("{:.2e}".format(vastable.iloc[4, 37]))
-        GWPtotA5 = "{}".format("{:.2e}".format(vastable.iloc[5, 37]))
+        GWPtotA3 = "{}".format("{:.2e}".format(vastable.iloc[4, 37]))
+        GWPtotA4 = "{}".format("{:.2e}".format(vastable.iloc[5, 37]))
+        GWPtotA5 = "{}".format("{:.2e}".format(vastable.iloc[3, 37]))
         GWPtotA6 = "{}".format("{:.2e}".format(vastable.iloc[6, 37]))
 
 
@@ -2127,12 +2128,14 @@ input_21b, input_22b, input_222b, input_31b,  input_333b, area3b, input_41b,  in
         plot_bgcolor='#DAF0AD', font_family="Arial",
         legend=dict(
             orientation="h",
-            yanchor="bottom",
-            y=1.02,
-            xanchor="right",
-            x=1,
+            yanchor="top",
+            #itemwidth=80,
+            y=1.2,
+            xanchor="left",
+            x=-0,
             title_text=None
         ), legend_font=dict(size=11),
+        modebar_remove=["zoom", "pan", "select", "zoomIn", "zoomOut", "autoScale", 'lasso2d']
 
     )
     fig.update_traces(
@@ -2146,12 +2149,13 @@ input_21b, input_22b, input_222b, input_31b,  input_333b, area3b, input_41b,  in
         plot_bgcolor='#DAF0AD', font_family="Arial",
         legend=dict(
             orientation="h",
-            yanchor="bottom",
-            y=1.02,
-            xanchor="right",
-            x=1,
+            yanchor="top",
+            y=1.2,
+            xanchor="left",
+            x=0,
             title_text=None
         ), legend_font=dict(size=11),
+        modebar_remove=["zoom", "pan", "select", "zoomIn", "zoomOut", "autoScale",  'lasso2d']
 
     )
 
