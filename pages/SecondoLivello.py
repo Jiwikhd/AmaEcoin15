@@ -765,11 +765,13 @@ def data_store(inputdokmeh2, dokmeexcel, volte, data, column,dataexcel, columnex
                           df.loc[(df['Composizione'] == "EoL film estensibile LDPE")][i].values[0])) / (num1 * num2)
             EoLter.append(eolter)
 
-        if (schifosso["sum"].sum(axis=0) == 0) & (schifosso["sumb"].sum(axis=0) != 0):
+                if (schifosso["sum"].sum(axis=0) == 0) & (schifosso["sumb"].sum(axis=0) != 0):
+            onlytwo = []
             firsttwo = []
             for i in impacts:
                 firstpart = df.loc[(df['Componente'] == ddconf)][i].values[0] * 1
                 secondpart = (df.loc[(df['Componente'] == "part2")][i].values[0]) * (inputweight * 0.001)
+                onlytwo.append(secondpart)
                 firstsecond = firstpart + secondpart
                 firsttwo.append(firstsecond)
 
@@ -788,14 +790,16 @@ def data_store(inputdokmeh2, dokmeexcel, volte, data, column,dataexcel, columnex
                 thirdpartb = [((x / (1 - (sfrido * 0.01))) * sfrido * 0.01) for x in schifosso["EoL Bustab"]]
                 schifosso["Bustab"] = [(x / (1 - (sfrido * 0.01))) for x in schifosso["Bustab"]]
 
-            confezionamneto = [0, 0, 0, 0, 0, 0, 0]
+            confezionamneto = onlytwo
             confezionamentob = [x + y for x, y in zip(firsttwo, thirdpartb)]
 
         elif (schifosso["sum"].sum(axis=0) != 0) & (schifosso["sumb"].sum(axis=0) == 0):
             firsttwo = []
+            onlytwo = []
             for i in impacts:
                 firstpart = df.loc[(df['Componente'] == ddconf)][i].values[0] * 1
                 secondpart = (df.loc[(df['Componente'] == "part2")][i].values[0]) * (inputweight * 0.001)
+                onlytwo.append(secondpart)
                 firstsecond = firstpart + secondpart
                 firsttwo.append(firstsecond)
 
@@ -815,11 +819,15 @@ def data_store(inputdokmeh2, dokmeexcel, volte, data, column,dataexcel, columnex
                 schifosso["Busta"] = [(x / (1 - (sfrido * 0.01))) for x in schifosso["Busta"]]
 
             confezionamneto = [x + y for x, y in zip(firsttwo, thirdpart)]
-            confezionamentob = [0, 0, 0, 0, 0, 0, 0]
+            confezionamentob = onlytwo
 
         elif (schifosso["sum"].sum(axis=0) == 0) & (schifosso["sumb"].sum(axis=0) == 0):
-            confezionamneto = [0, 0, 0, 0, 0, 0, 0]
-            confezionamentob = [0, 0, 0, 0, 0, 0, 0]
+            onlytwo = []
+            for i in impacts:
+                secondpart = (df.loc[(df['Componente'] == "part2")][i].values[0]) * (inputweight * 0.001)
+                onlytwo.append(secondpart)
+            confezionamneto = onlytwo
+            confezionamentob = onlytwo
 
         elif (schifosso["sum"].sum(axis=0) != 0) & (schifosso["sumb"].sum(axis=0) != 0):
             firsttwo = []
