@@ -16,7 +16,7 @@ Ecoinnovazione_logo = Image.open("assets/ECOI.png")
 #Ecoinnovazione_logo = "https://www.emiliaromagnastartup.it/sites/default/files/ecoinnovazione.jpg"
 Amadori_logo = Image.open("assets/Amadori.png")
 VALID_USERNAME_PASSWORD_PAIRS = {
-    'Eco-Amadori-22': 'eco1612'
+    'Amadori': 'Packaging_tool_2022'
 }
 auth = dash_auth.BasicAuth(
     app,
