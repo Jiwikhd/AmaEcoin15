@@ -765,7 +765,7 @@ def data_store(inputdokmeh2, dokmeexcel, volte, data, column,dataexcel, columnex
                           df.loc[(df['Composizione'] == "EoL film estensibile LDPE")][i].values[0])) / (num1 * num2)
             EoLter.append(eolter)
 
-                if (schifosso["sum"].sum(axis=0) == 0) & (schifosso["sumb"].sum(axis=0) != 0):
+        if (schifosso["sum"].sum(axis=0) == 0) & (schifosso["sumb"].sum(axis=0) != 0):
             onlytwo = []
             firsttwo = []
             for i in impacts:
